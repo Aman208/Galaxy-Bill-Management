@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import { Outlet } from "react-router-dom";
 
 
-import { UserContext } from '../../Context/UserContext'
+// import { UserContext } from '../../Context/UserContext'
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
@@ -39,19 +39,19 @@ export default function Dashboard() {
         setOpen(false);
     };
 
-    const { currentUser, signInUser, isLoggedIn } = useContext(UserContext);
+    // const { currentUser, signInUser, isLoggedIn } = useContext(UserContext);
     const navigate = useNavigate();
 
     useEffect(() => {
         if (localStorage.getItem("token") != null && localStorage.getItem("currentUser") != null) {
             let user = JSON.parse(localStorage.getItem("currentUser"));
             let token = localStorage.getItem("token")
-            signInUser(user, token);
+            // signInUser(user, token);
         }
         else {
-            navigate("/login");
+            // navigate("/login");
         }
-    }, [isLoggedIn]);
+    }, []);
 
 
 

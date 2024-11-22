@@ -8,7 +8,7 @@ import { UserContext } from '../../Context/UserContext'
 
 function AdminProfile() {
   const navigate = useNavigate();
-  const { currentUser } = useContext(UserContext);
+  // const { currentUser } = useContext(UserContext);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -35,7 +35,7 @@ function AdminProfile() {
   }, []);
 
   const getAdminById = async () => {
-    let adminUserId = currentUser.userId;
+    // let adminUserId = currentUser.userId;
     const response = await axios.get(`http://localhost:3001/profile/admin/${adminUserId}`);
     //console.log(response);
     setUserId(response.data._id);

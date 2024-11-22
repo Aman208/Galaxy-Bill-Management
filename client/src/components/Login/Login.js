@@ -12,7 +12,7 @@ function Login() {
     const [errorDialogueBoxOpen, setErrorDialogueBoxOpen] = useState(false);
     const [errorList, setErrorList] = useState([]);
 
-    const { signInUser } = useContext(UserContext);
+    // const { signInUser } = useContext(UserContext);
 
     const handleDialogueOpen = () => {
         setErrorDialogueBoxOpen(true)
@@ -42,7 +42,7 @@ function Login() {
                 let respMessage = data.message;
                 let user = data.user;
                 if (respMessage === "success") {
-                    signInUser(user, data.token);
+                    // signInUser(user, data.token);
                     navigate("/");
                 }
                 else {

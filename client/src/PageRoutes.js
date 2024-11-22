@@ -8,7 +8,6 @@ import SignupPage from './components/SignUp/SignupPage';
 
 
 import Dashboard from './components/dashboard/Dashboard';
-import AdminDashboard from './components/dashboard/AdminDashboard';
 
 
 
@@ -20,11 +19,11 @@ import CustomerList from "./components/Customer/CustomerList";
 import Customer from './components/Customer/Customer';
 
 
-import {UserContext} from './Context/UserContext'
-import PatientDashboard from './components/dashboard/PatientDashboard';
+// import {UserContext} from './Context/UserContext'
+// import PatientDashboard from './components/dashboard/PatientDashboard';
 import DoctorDashboard from './components/dashboard/DoctorDashboard';
 
-import DoctorProfile from './components/Profile/DoctorProfile';
+
 import PricingManager from './components/PriceManager/PricingManager'
 import PriceManager from './components/PriceManager/PriceManager';
 import Billing from './components/BillPage/Billing';
@@ -39,21 +38,14 @@ const NotFound = () => <h2 style={{margin:'70px'}}>This Path is not available</h
 
 
 export default function PageRoutes(){
-    const {currentUser} = useContext(UserContext);
+    // const {currentUser} = useContext(UserContext);
     return (
         <Routes>
             <Route path='/' element= {<Dashboard />} >
                 <Route index element= {
-                    currentUser.userType == "Admin"?
-                        <AdminDashboard />:
-                    currentUser.userType == "Doctor"?
-                        <DoctorDashboard />:
-                    currentUser.userType == "Patient"? 
-                        <PatientDashboard />:
-                    <div />} 
+                        <DoctorDashboard />
+                    } 
                 />
-               
-
 
                 <Route path='products' element= {   <Product /> } >
                     <Route index element= { <ProductList /> } />

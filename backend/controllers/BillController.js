@@ -1,6 +1,4 @@
 
-
-
 const Customer = require("../models/customer.js");
 const ItemBill = require("../models/billItem.js");
 const Product = require("../models/product.js");

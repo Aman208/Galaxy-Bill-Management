@@ -13,7 +13,7 @@ import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 
 import { NavLink,  useLocation } from 'react-router-dom'
 import React, { useContext } from 'react';
-import { UserContext } from '../../../Context/UserContext'
+// import { UserContext } from '../../../Context/UserContext'
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import PersonIcon from '@mui/icons-material/Person';
 import GroupIcon from '@mui/icons-material/Group';
@@ -78,7 +78,7 @@ export default function Sidebar({ open, handleDrawerClose, handleDrawerOpen }) {
     let selectedItem = useLocation().pathname.split('/')[1]
     // console.log(selectedItem);
 
-    const { isLoggedIn, currentUser, signOutUser } = useContext(UserContext);
+    // const { isLoggedIn, currentUser, signOutUser } = useContext(UserContext);
 
     const [openUserCollapse, setOpenUseCollapse] = React.useState(false);
 
@@ -266,7 +266,7 @@ export default function Sidebar({ open, handleDrawerClose, handleDrawerOpen }) {
                         >
                             <GroupIcon style={{ color: '#fff' }} />
                         </ListItemIcon>
-                        <ListItemText primary={"Geenrate Bill"} sx={{ opacity: open ? 1 : 0 }} />
+                        <ListItemText primary={"Generate Bill"} sx={{ opacity: open ? 1 : 0 }} />
                     </ListItemButton>
                 </ListItem>
                 }

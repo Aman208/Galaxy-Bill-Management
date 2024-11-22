@@ -4,11 +4,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import ErrorDialogueBox from '../MUIDialogueBox/ErrorDialogueBox';
 import axios from "axios";
 import Box from '@mui/material/Box';
-import { UserContext } from '../../Context/UserContext'
+// import { UserContext } from '../../Context/UserContext'
 
 function PatientProfile() {
   const navigate = useNavigate();
-  const { currentUser } = useContext(UserContext);
+  // const { currentUser } = useContext(UserContext);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');

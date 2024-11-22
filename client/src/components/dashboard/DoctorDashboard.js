@@ -3,7 +3,7 @@ import styles from './Dashboard.module.css';
 import { React, useState, useEffect, useContext } from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import { UserContext } from '../../Context/UserContext'
+// import { UserContext } from '../../Context/UserContext'
 import { NavLink } from 'react-router-dom';
 import axios from "axios";
 import moment from "moment"
@@ -12,7 +12,7 @@ import moment from "moment"
 
 
 export default function DoctorDashboard() {
-	const { currentUser } = useContext(UserContext);
+	// const { currentUser } = useContext(UserContext);
 	const [appsTodayCount, setAppsTodayCount] = useState(0);
 	const [pendingAppsTodayCount, setPendingAppsTodayCount] = useState(0);
 	const [bookedAppointments, setBookedAppointments] = useState([]);
@@ -117,7 +117,7 @@ export default function DoctorDashboard() {
 				<div className='text-white'>
 					<h3 >Welcome!</h3>
 					<br/>
-					<h4> Dr. {currentUser.firstName} {currentUser.lastName} </h4>
+					{/* <h4> Dr. {currentUser.firstName} {currentUser.lastName} </h4> */}
 					<br/>
 					<div class={styles.horizontalLine}></div>
 					At Green Hills, we believe that every patient deserves the highest quality care possible. 

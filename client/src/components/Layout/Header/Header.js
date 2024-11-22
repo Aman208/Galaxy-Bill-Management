@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 import { useNavigate } from "react-router-dom";
 import React, { useContext } from 'react';
-import { UserContext } from '../../../Context/UserContext'
+// import { UserContext } from '../../../Context/UserContext'
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
@@ -34,7 +34,7 @@ const AppBar = styled(MuiAppBar, {
 
 const Header = ({ open, handleDrawerOpen, headerTitle }) => {
   const navigate = useNavigate();
-  const { isLoggedIn, currentUser, signOutUser } = useContext(UserContext);
+  // const { isLoggedIn, currentUser, signOutUser } = useContext(UserContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const redirectToHome = () => {
     navigate("/");
@@ -48,7 +48,7 @@ const Header = ({ open, handleDrawerOpen, headerTitle }) => {
   };
 
   const handleSignOut = () => {
-    signOutUser();
+    //signOutUser();
     handleClose(null);
   };
 
@@ -73,7 +73,7 @@ const Header = ({ open, handleDrawerOpen, headerTitle }) => {
           {/* {headerTitle} */}
           Galaxy Enterprises
         </Typography>
-        {isLoggedIn && (
+        {true  && (
           <div className={styles.accountIcon}>
             <IconButton
               size="large"
@@ -84,11 +84,11 @@ const Header = ({ open, handleDrawerOpen, headerTitle }) => {
               color="inherit"
               
             >
-              <AccountCircle style={{ fontSize: 42, marginRight: 8 }} />
+              {/* <AccountCircle style={{ fontSize: 42, marginRight: 8 }} />
               <div style={{ display: 'flex', flexDirection: "column", alignItems: "start" }} >
                 <span style={{ fontSize: 19, color: 'grey', marginTop: 3 }} > {currentUser.firstName} {currentUser.lastName}</span>
                 <span style={{ fontSize: 12, color: 'grey' }} > {currentUser.userType}</span>
-              </div>
+              </div> */}
 
 
             </IconButton>

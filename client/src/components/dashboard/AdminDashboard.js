@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import axios from "axios";
 import { NavLink } from 'react-router-dom';
 import moment from "moment"
-import { UserContext } from '../../Context/UserContext'
+// import { UserContext } from '../../Context/UserContext'
 
 
 export default function AdminDashboard() {
@@ -17,7 +17,7 @@ export default function AdminDashboard() {
 	const [pendingAppsTodayCount, setPendingAppsTodayCount] = useState(0);
 	const [bookedAppointments, setBookedAppointments] = useState([]);
 	const [doctors, setdoctor] = useState([]);
-	const { currentUser } = useContext(UserContext);
+	// const { currentUser } = useContext(UserContext);
 
 	const getUserCountByRole = async (userType) => {
 		const response = await axios.post(`http://localhost:3001/count/users`,
@@ -107,7 +107,7 @@ export default function AdminDashboard() {
 				<div className='text-white'>
 					<h3 >Welcome!</h3>
 					<br/>
-					<h4>{currentUser.firstName} {currentUser.lastName}</h4>
+					{/* <h4>{currentUser.firstName} {currentUser.lastName}</h4> */}
 					<br/>
 					<div class={styles.horizontalLine}></div>
 					At Green Hills, we believe that every patient deserves the highest quality care possible. 

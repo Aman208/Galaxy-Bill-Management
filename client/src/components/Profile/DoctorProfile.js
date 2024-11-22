@@ -4,11 +4,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import ErrorDialogueBox from '../MUIDialogueBox/ErrorDialogueBox';
 import axios from "axios";
 import Box from '@mui/material/Box';
-import { UserContext } from '../../Context/UserContext'
+// import { UserContext } from '../../Context/UserContext'
 
 function DoctorProfile() {
     const navigate = useNavigate();
-    const { currentUser } = useContext(UserContext);
+    // const { currentUser } = useContext(UserContext);
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -34,7 +34,8 @@ function DoctorProfile() {
 
   
     const getdoctorById = async () => {
-        let doctorUserId = currentUser.userId;
+        let doctorUserId = "";
+        //  currentUser.userId;
     
         const response = await axios.get(`http://localhost:3001/profile/doctor/`+doctorUserId);
         console.log(response.data._id);
