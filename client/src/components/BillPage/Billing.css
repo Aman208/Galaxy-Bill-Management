@@ -1,0 +1,70 @@
+/* App.css */
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  
+  .input-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .select-box {
+    padding: 0.5rem;
+    border: 1px solid #bf1414;
+    border-radius: 4px;
+    font-size: 1rem;
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  
+  .optgroup-label {
+    font-weight: bold;
+    font-size: 1.9rem;
+    margin: 1.5rem;
+    color: white;
+  }
+  
+  .option-item {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-size: 1rem;
+  }@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  body {
+    font-family: "Roboto", sans-serif;
+
+    color: #333;
+    height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  .MuiTableCell-body {
+    font-size: 29px;
+  }
+  .MuiTableCell-head{
+    font-size: 25px;
+  }
+  
+  
+  /* .container {
+    width: 30%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  
