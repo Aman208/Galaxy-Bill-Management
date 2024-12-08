@@ -3,7 +3,7 @@
 .form-control {
     display: flex;
     flex-direction: column;
-    /* margin: rem 0; */
+    margin: 1rem 0;
     width: 100%;
     max-width: 300px;
   }
@@ -40,6 +40,7 @@
 
   body {
     font-family: "Roboto", sans-serif;
+
     color: #333;
     height: 100vh;
   }

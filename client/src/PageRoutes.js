@@ -33,7 +33,10 @@ import ViewBillPage from './components/ViewBill/ViewBillPage';
 import AdminBill from './components/AdminBillView/AdminBill';
 import AdminBillView from './components/AdminBillView/AdminBillView';
 import Invoice from './components/Invoice/Invoice';
-
+import PaymentPage from './components/PaymentPage/PaymentPage';
+import PaymentDashboardPage from './components/PaymentDashboard/PaymentDashboardPage';
+import Payment from './components/PaymentPage/Payment';
+import PaymentDashboard from './components/PaymentDashboard/PaymentDashboard';
 const NotFound = () => <h2 style={{margin:'70px'}}>This Path is not available</h2>
 
 
@@ -66,6 +69,10 @@ export default function PageRoutes(){
                     <Route index element= {<BillingPage />} />
                 </Route>
 
+                <Route path='payment' element= { <Payment />} >
+                    <Route index element= {<PaymentPage />} />
+                </Route>
+
                 <Route path='view-bill' element= { <ViewBill />} >
                     <Route index element= {<ViewBillPage />} />
                 </Route>
@@ -76,6 +83,10 @@ export default function PageRoutes(){
 
                 <Route path='generate-invoice' element= { <Invoice />} >
                     <Route index element= {<Invoice />} />
+                </Route>
+
+                <Route path='payment-dashboard' element= { <PaymentDashboard />} >
+                    <Route index element= {<PaymentDashboardPage />} />
                 </Route>
                 
 

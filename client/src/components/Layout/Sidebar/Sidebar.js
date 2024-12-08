@@ -17,6 +17,8 @@ import React, { useContext } from 'react';
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import PersonIcon from '@mui/icons-material/Person';
 import GroupIcon from '@mui/icons-material/Group';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import styles from './Sidebar.module.css'
 
 const drawerWidth = 240;
@@ -231,7 +233,7 @@ export default function Sidebar({ open, handleDrawerClose, handleDrawerOpen }) {
                                 justifyContent: 'center',
                             }}
                         >
-                            <GroupIcon style={{ color: '#fff' }} />
+                            <ManageAccountsIcon style={{ color: '#fff' }} />
                         </ListItemIcon>
                         <ListItemText primary={"Price Manager"} sx={{ opacity: open ? 1 : 0 }} />
                     </ListItemButton>
@@ -267,6 +269,70 @@ export default function Sidebar({ open, handleDrawerClose, handleDrawerOpen }) {
                             <GroupIcon style={{ color: '#fff' }} />
                         </ListItemIcon>
                         <ListItemText primary={"Generate Bill"} sx={{ opacity: open ? 1 : 0 }} />
+                    </ListItemButton>
+                </ListItem>
+                }
+
+                {<ListItem key={"Add Payment"} disablePadding sx={{ display: 'block' }}>
+                    <ListItemButton
+                        component={NavLink}
+                        to="/payment"
+                        style={{ textDecoration: 'none', color: 'white' }}
+                        selected={selectedItem == "payment" ? true : false}
+                        sx={{
+                            minHeight: 48,
+                            justifyContent: open ? 'initial' : 'center',
+                            px: 2.5,
+                            "&.Mui-selected": {
+                                backgroundColor: "#1b4f32",
+                            },
+                            "&.Mui-selected:hover": {
+                                backgroundColor: "#1b4f32",
+                            },
+                        }}
+                    >
+                        <ListItemIcon
+                            sx={{
+                                minWidth: 0,
+                                mr: open ? 3 : 'auto',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <CurrencyRupeeIcon/>
+                        </ListItemIcon>
+                        <ListItemText primary={"Add Payment"} sx={{ opacity: open ? 1 : 0 }} />
+                    </ListItemButton>
+                </ListItem>
+                }
+
+                {<ListItem key={"Payment Dashboard"} disablePadding sx={{ display: 'block' }}>
+                    <ListItemButton
+                        component={NavLink}
+                        to="/payment-dashboard"
+                        style={{ textDecoration: 'none', color: 'white' }}
+                        selected={selectedItem == "payment-dashboard" ? true : false}
+                        sx={{
+                            minHeight: 48,
+                            justifyContent: open ? 'initial' : 'center',
+                            px: 2.5,
+                            "&.Mui-selected": {
+                                backgroundColor: "#1b4f32",
+                            },
+                            "&.Mui-selected:hover": {
+                                backgroundColor: "#1b4f32",
+                            },
+                        }}
+                    >
+                        <ListItemIcon
+                            sx={{
+                                minWidth: 0,
+                                mr: open ? 3 : 'auto',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <CurrencyRupeeIcon/>
+                        </ListItemIcon>
+                        <ListItemText primary={"Payment Dashboard"} sx={{ opacity: open ? 1 : 0 }} />
                     </ListItemButton>
                 </ListItem>
                 }

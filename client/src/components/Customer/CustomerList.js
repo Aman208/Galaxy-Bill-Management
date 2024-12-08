@@ -25,7 +25,8 @@ const districts = {
     "Bokaro": ['Telo', "Gomaoh" , "Pordagh", "Navadih"],
     "Koderma": ["Koderma", "Tilaiya"],
     "Bihar": ['Rajgir', "Amarpur"],
-    "Daltengunj" : ["Chandwa"]
+    "Daltengunj" : ["Chandwa"],
+    "Gaya" :["Barachatti" , "Sobh" , "Dobhi" , "Sherghati"]
 };
 
 

@@ -10,18 +10,22 @@ const PaymentSchema = new Schema({
         ref: "Customer",
         required: [true, 'Please provide customer id'],
     },
-    amount: {
+    billId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Bill",
+        required: [true, 'Please provide bill id'],
+    },
+    paymentAmount: {
         type: Number,
         required: [true, 'Please provide amount'],
     },
     paymentMethod: {
         type: String,
         required: [true, 'Please provide payment method'],
-        enum: ['Cash', 'PhonePe', 'Cash Credit'],
+        enum: ['Cash', 'Cash Credit (CC)', 'Current A/C' , 'Others A/C'],
     },
     paymentDescription: {
-        type: String,
-        required: [true, 'Please provide payment Description']
+        type: String
     },
     paymentDate: {
         type: Date,

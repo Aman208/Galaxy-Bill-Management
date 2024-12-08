@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../Context/UserContext';
 
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -9,15 +8,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-
-import axios from "axios";
-import moment from "moment"
-
-
-import { useNavigate } from 'react-router-dom';
-
-
-
 
 function createData(name, area, district, customerType) {
     return { name, area, district, customerType };
@@ -48,14 +38,6 @@ export default function CustomerTable({ customerList }) {
         setPage(0);
     };
 
-    const formatDateForDateInput = (dateOfJoining) => {
-        // console.log("dateOfJoining",dateOfJoining);
-        dateOfJoining = moment(new Date(dateOfJoining.slice(0, -1))).format('YYYY-MM-DD');
-        // console.log("dateOfJoining",dateOfJoining);
-        return dateOfJoining;
-    }
-
-    // const resp = await axios.get(`http://localhost:3001/prescription/invoice/${value}`,
 
     let rows = customerList.map((customer) => {
 
@@ -66,13 +48,7 @@ export default function CustomerTable({ customerList }) {
             customer.customerType
         )
     })
-
-
-    React.useEffect(() => {
-
-    }, [])
-
-
+   
     return (
         <Paper sx={{ width: '95%', overflow: 'hidden', marginTop: 2, boxShadow: "0 12px 24px rgba(0, 0, 0, 0.2) " }}>
             <TableContainer>
